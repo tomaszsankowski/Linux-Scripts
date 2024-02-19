@@ -1,0 +1,26 @@
+.TH PhotoOrg 1 "29.05.2023" "1.0" "PhotoOrg man page"
+.SH NAME
+.I PhotoOrg
+is a program that allows you to sort photos and organize them into directories in the format year/month.
+.SH SYNOPSIS
+PhotoOrg [OPTIONS]
+.SH OPTIONS
+.SS -d
+.SM if user choosen this option, program will create additional directories to store photos in year/month/name_of_file format.
+.SS -t
+.SM this options searches for photo buildups (if there were more than 19 photos taken in same day) and asks user for name of potential trip. If users clicks 'cancel' button it will not make a directory. If user will enter trip name it will make an additional directory in current month-directory. IMPORTANT! -t option works only when -d option is also used!
+.SS -h
+.SM this option opens manual where user can find help with using the program
+.SH DESCRIPTION
+.SS What exacly it does
+.SM PhotoOrg lets you choose a directory where you store photos you want to sort. Program creates additional folder 'sorted' in choosen directory and changes name to it's creation date. Then, depending on aditional options choosen by user, it can store it in directories named by year of creation. Inside each year-folder photos are stored in proper directories named by month of their creation. Program also have option to look for potential photo buildups and asks user if he wants to create separate folders for potential vacations etc.
+.SS How does it work
+.SM PhotoOrg uses 'stat' function which provides the program the potential date of creating a photo. Then it changes the name to the format of YYYY-MM-DD-HH:MM:SS and copy it to 'sorted' directory. The program does not move photos from its current destination - it creates copies of photos so you can undo your action just by deleting 'sorted' directory which is being created in choosen directory.
+.SH SEE ALSO
+For more information you can contact us via mail: 
+.BR mail @ gmail . com
+.SH BUGS
+report bugs to
+.BR mail @ gmail . com
+.SH AUTHOR
+.B TOMASZ SANKOWSKI 193363\*R
